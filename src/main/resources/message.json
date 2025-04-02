@@ -1,0 +1,9 @@
+{
+  "ru": {
+    "start_bot_message": "Привет, давай поговорим"
+  },
+
+  "en": {
+    "start_bot_message": "Hello, lets talk"
+  }
+}
