@@ -13,15 +13,19 @@ import org.hibernate.cfg.Configuration
 @Slf4j
 @CompileStatic
 class UserRepository implements DAO<TelegramUser, Long> {
+
     private Configuration configuration = HibernateUtil.getConfiguration()
     private static UserRepository INSTANCE = new UserRepository()
-    private SessionFactory factory
 
+    private SessionFactory factory
 
     @Override
     Optional<TelegramUser> create(TelegramUser telegramUser) {
         Optional<TelegramUser> user
 
+        if (telegramUser.telegramId == null) {
+            throw new TelegramUserException("Telegram is empty")
+        }
         try (SessionFactory factory = configuration.buildSessionFactory()
           def open = factory.getCurrentSession()) {
             open.beginTransaction()

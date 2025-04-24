@@ -10,11 +10,14 @@ class CreateUserMapper implements Mapper<CreateUserDto, TelegramUserProfile> {
 
     @Override
     TelegramUserProfile ToMap(CreateUserDto userDTO) {
-        TelegramUserProfile profile = new TelegramUserProfile()
-        profile.setNickName(userDTO.nickname)
-        profile.setBirthday(userDTO.birthday)
-        profile.setGender(userDTO.gender)
-        return profile
+        if (userDTO == null) {
+            throw new NullPointerException();
+        }
+            TelegramUserProfile profile = new TelegramUserProfile()
+            profile.setNickName(userDTO.nickname)
+            profile.setBirthday(userDTO.birthday)
+            profile.setGender(userDTO.gender)
+            return profile
     }
 
 

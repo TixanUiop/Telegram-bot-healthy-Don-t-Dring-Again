@@ -9,6 +9,7 @@ import java.time.LocalDate
 
 @Converter(autoApply = true)
 class LocalDateConverter implements AttributeConverter<LocalDate, Date> {
+
     @Override
     Date convertToDatabaseColumn(LocalDate localDate) {
         Date.valueOf(localDate)

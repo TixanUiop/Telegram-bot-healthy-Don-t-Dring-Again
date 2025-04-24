@@ -6,8 +6,6 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession
 
 @CompileStatic
 static void main(String[] args) {
-
-
     try {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession)
         botsApi.registerBot(new TelegramBot())
@@ -15,5 +13,4 @@ static void main(String[] args) {
     } catch (Exception e) {
         e.printStackTrace()
     }
-
 }

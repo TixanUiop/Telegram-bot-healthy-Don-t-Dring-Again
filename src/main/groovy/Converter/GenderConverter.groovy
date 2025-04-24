@@ -8,7 +8,6 @@ import jakarta.persistence.Converter
 @Converter(autoApply = true)
 class GenderConverter implements AttributeConverter<Gender, String> {
 
-
     @Override
     String convertToDatabaseColumn(Gender gender) {
         gender.name()

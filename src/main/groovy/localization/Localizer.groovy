@@ -12,14 +12,6 @@ class Localizer {
     private static final String LANG_NAME = "message.json"
     private static Map<String, Map<String, String>> translation = [:]
 
-//    static  {
-//        def stream = getClass().getClassLoader().getResourceAsStream(LANG_NAME)
-//        if (!stream) {log.error("Не удалось найти Json файл с локализацией")}
-//        else {
-//            def slurper = new JsonSlurper()
-//            translation = slurper.parseText(stream.text) as Map<String, Map<String, String>>
-//        }
-//    }
 
     Localizer(String lang) {
         this.language = lang

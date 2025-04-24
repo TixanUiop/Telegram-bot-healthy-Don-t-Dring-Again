@@ -32,12 +32,12 @@ class TelegramUser extends BaseEntity<Integer>{
         this.profile = telegramUserProfile
     }
 
-    Integer getId() {
-        return id
-    }
-    void setId(Integer id) {
-        this.id = id
-    }
+//    Integer getId() {
+//        return id
+//    }
+//    void setId(Integer id) {
+//        this.id = id
+//    }
     Long getTelegramId() {
         return telegramId
     }

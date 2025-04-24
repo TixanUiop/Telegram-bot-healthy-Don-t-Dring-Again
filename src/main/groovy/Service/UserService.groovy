@@ -53,6 +53,13 @@ class UserService {
     }
 
 
+    //Testing
+    UserService(UserRepository repository, CreateTelegramUserMapper createTelegramUserMapper) {
+        this.repository = repository
+        this.createTelegramUserMapper = createTelegramUserMapper
+    }
+
+
     private UserService() {}
     static UserService getINSTANCE() {
         INSTANCE

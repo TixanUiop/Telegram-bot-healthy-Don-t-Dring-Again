@@ -13,7 +13,7 @@ final class HibernateUtil {
     private static Configuration getConfig() {
         try {
             log.info("Загрузка конфигурации файла");
-            configuration = new Configuration().configure();
+            configuration = new Configuration().configure("hibernate.test.cfg.xml");
             log.info("Конфигурация успешно загружена");
         } catch (Exception e) {
             log.error("Ошибка конфигурации файла Configuration", e);
