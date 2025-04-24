@@ -1,9 +1,59 @@
 {
   "ru": {
-    "start_bot_message": "Привет, давай поговорим"
+    "start_bot_message": "\uD83C\uDF38 Привет! Я — твой заботливый помощник на пути к трезвой жизни.\n\n\uD83D\uDCAB Здесь никто не будет осуждать тебя или ставить диагнозы.  \nТы — не болезнь. Ты человек, который делает смелый шаг вперёд.  \nИ я буду рядом на этом пути \uD83D\uDC95\n\n✨ Что я умею:\n\n\uD83D\uDCC5  —  Запоминаю дату начала твоей трезвости  \n\uD83D\uDCCA  —  Веду статистику твоих успехов  \n\uD83D\uDC8C  —  Напоминаю, как ты восстанавливаешься:  \n     *Например: уже 1 день и 12 часов без алкоголя — печень восстановилась на 12%, давление стабилизируется, сон улучшается.*  \n\uD83D\uDD14  —  Присылаю тёплые напоминания и поддерживаю в сложные моменты\n\n♻\uFE0F Если вдруг случился срыв — это не конец.  \nТы всегда можешь обнулить свой путь и начать заново.  \nЯ не обижаюсь. Я рядом.\n\n\uD83D\uDD10 Все данные остаются только у тебя, и ты в любой момент можешь полностью удалить их через ⚙\uFE0F *Настройки*.\n\n\uD83D\uDCBB Если тебе интересно, весь исходный код проекта доступен на [GitHub](ссылка_на_репозиторий), и ты всегда можешь ознакомиться с ним.\n\nТы уже сделала первый шаг — ты сильнее, чем тебе кажется.  \n\uD83C\uDF37 Давай начнём вместе. Просто нажми кнопку ниже и выбери дату начала трезвости.",
+
+    "alcoholButton": "Алкогольная",
+    "smokeButton": "Табачная",
+    "settingButton": "⚙\uFE0F Настройки",
+    "statisticsButton": "\uD83E\uDD43\uD83D\uDEAB Статистика трезвости",
+    "startDayOfSobrietyButton": "\uD83C\uDF77\uD83D\uDCC9 Начать день трезвости",
+    "quoteButton": "\uD83E\uDDE0 Цитата дня",
+
+    "settingButtonDeleteSession": "Удалить аккаунт",
+    "settingButtonUpdateSession": "Сбросить прогресс",
+
+    "switchDefaultSection": "Выберите существующий пункт",
+
+
+    "genderMale": "Мужской",
+    "genderFemale": "Женский",
+
+    "acceptYes": "Да",
+    "acceptNo": "Нет",
+
+
+    "finishNickName": "Отлично! Теперь введите дату рождения в формате день.месяц.год (например: 20.03.1980).",
+    "finishBirthday": "Отлично! Теперь введите ваш гендер (например: Мужской/Женский)",
+    "finishRegistration": "\uD83C\uDF89 Регистрация завершена!\nСпасибо за предоставленную информацию!\n\nВот что вы указали:\n\uD83D\uDC64 Имя / Никнейм: %s\n\uD83C\uDF82 Дата рождения: %s\n\uD83D\uDEBB Пол: %s",
+    "startRegistration": "\uD83D\uDCAC Давай начнём регистрацию!\nЧтобы я мог лучше поддерживать тебя на пути к трезвости, мне нужно немного информации:\n\n\uD83E\uDDFE Как к тебе обращаться?\nПридумай себе никнейм или просто введи своё настоящее имя — как тебе комфортнее. Это имя будет отображаться в напоминаниях и статистике.\n\n\uD83C\uDF82 Дата рождения\nЭто поможет точнее формировать статистику восстановления и прогресса.\n\n\uD83D\uDEBB Пол\nНужен для составления корректной информации о восстановлении организма.\n\n\uD83D\uDDD1\uFE0F Важно знать\nТы всегда можешь удалить все свои данные в настройках — безвозвратно и полностью.\nНикакой лишней информации, никакого давления. Всё под твоим контролем \uD83E\uDD0D",
+    "errorInputBirthday": "Вы вероятно допустили ошибку в воде даты. Введите дату в соответствии с шаблоном (например: 12.03.2002)",
+    "waitingName": "\uD83D\uDCAC Начнём с имени!\nПожалуйста, введите ваш никнейм или настоящее имя — как вам удобнее. Это поможет мне правильно обращаться к вам в напоминаниях и статистике."
   },
 
+
+
   "en": {
-    "start_bot_message": "Hello, lets talk"
+    "start_bot_message": "\uD83C\uDF38 Hello! I'm your caring assistant on the path to a sober life.\n\n\uD83D\uDCAB Here, no one will judge you or give you a diagnosis.  \nYou are not your illness. You are a person who is taking a brave step forward.  \nAnd I will be here by your side every step of the way \uD83D\uDC95\n\n✨ Here’s what I can do:\n\n\uD83D\uDCC5  —  I remember the date you started your sobriety journey  \n\uD83D\uDCCA  —  I track your progress  \n\uD83D\uDC8C  —  I remind you how your body is recovering:  \n     *For example: you haven’t had a drink for 1 day and 12 hours — your liver has recovered by 12%, your blood pressure is stabilizing, and your sleep is improving.*  \n\uD83D\uDD14  —  I send you warm reminders and support during tough times\n\n♻\uFE0F If you happen to relapse, it’s not the end.  \nYou can always reset your journey and start again.  \nI won’t judge. I’m here for you.\n\n\uD83D\uDD10 All the data stays with you, and you can delete it completely at any time in ⚙\uFE0F *Settings*.\n\n\uD83D\uDCBB If you're interested, the entire source code of the project is available on [GitHub](repository_link), and you can always check it out.\n\nYou've already taken the first step — you're stronger than you think.  \n\uD83C\uDF37 Let's start together. Just click the button below and choose the date to start your sobriety journey.",
+
+    "startDayOfSobrietyButton": "\uD83C\uDF77\uD83D\uDCC9 Start a day of sobriety",
+    "alcoholButton": "Alcohol",
+    "smokeButton": "Smoke",
+    "settingButton": "⚙\uFE0F Settings",
+    "statisticsButton": "\uD83E\uDD43\uD83D\uDEAB Sobriety statistics",
+    "quoteButton": "\uD83E\uDDE0 Quote of the day",
+
+    "settingButtonDeleteSession": "Delete account",
+    "settingButtonUpdateSession": "Reset Progress",
+
+    "acceptYes": "Yes",
+    "acceptNo": "No",
+
+    "genderMale": "Male",
+    "genderFemale": "Female",
+    "finishNickName": "Great! Now please enter your date of birth in the format day.month.year (e.g., 20.03.1980).",
+    "finishBirthday": "Great! Now please enter your gender (e.g., Male or Female).",
+    "switchDefaultSection": "Select an existing item",
+    "startRegistration": "\uD83D\uDCAC Let’s start your registration!\nTo better support you on your journey to sobriety, I need a few details from you:\n\n\uD83E\uDDFE How should I call you?\nPick a nickname or enter your real name — whichever feels right for you. This name will be used in your stats and reminders.\n\n\uD83C\uDF82 Date of Birth\nHelps me provide more accurate progress and recovery insights.\n\n\uD83D\uDEBB Gender\nThis is necessary to tailor the health statistics to your body.\n\n\uD83D\uDDD1\uFE0F Important to know\nYou can permanently and completely delete all your data at any time in the settings.\nNo pressure, no extra info — you’re always in control \uD83E\uDD0D",
+    "waitingName": "\uD83D\uDCAC Let’s start with your name!\nPlease enter your nickname or real name — whichever you prefer. This will help me address you correctly in reminders and stats."
   }
 }

@@ -8,11 +8,22 @@ import groovy.util.logging.Slf4j
 @CompileStatic
 @Slf4j
 class Localizer {
-
+    private String language;
     private static final String LANG_NAME = "message.json"
-    private Map<String, Map<String, String>> translation = [:]
+    private static Map<String, Map<String, String>> translation = [:]
 
-    Localizer() {
+//    static  {
+//        def stream = getClass().getClassLoader().getResourceAsStream(LANG_NAME)
+//        if (!stream) {log.error("Не удалось найти Json файл с локализацией")}
+//        else {
+//            def slurper = new JsonSlurper()
+//            translation = slurper.parseText(stream.text) as Map<String, Map<String, String>>
+//        }
+//    }
+
+    Localizer(String lang) {
+        this.language = lang
+
         def stream = getClass().getClassLoader().getResourceAsStream(LANG_NAME)
         if (!stream) {log.error("Не удалось найти Json файл с локализацией")}
         else {
@@ -21,15 +32,9 @@ class Localizer {
         }
     }
 
-
-    def getMessage(String lang, String key)
+    String getMessage(String key)
     {
-        def message = translation.get(lang)?.get(key) ?: translation.get("ru").get(key)
-        if (message) {
-            message
-        }
-        else {
-            log.error("Ошибка локализации. Выбранный язык не существует")
-        }
+        def message = translation.get(language)?.get(key) ?: translation.get("ru").get(key)
+        return message
     }
 }

@@ -3,28 +3,33 @@ package Entity
 import groovy.transform.*
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.OneToOne
 import jakarta.persistence.Table
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException
 
 
 @Entity
 @Table(name = "telegram_users")
 @CompileStatic
-class TelegramUser {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id
+class TelegramUser extends BaseEntity<Integer>{
 
     @Column(name = "telegram_id")
     private Long telegramId
+
+    @OneToOne(mappedBy = "telegramUser")
+    private TelegramUserProfile profile;
 
     TelegramUser(){}
 
     TelegramUser(Long telegramId){
         this.telegramId = telegramId
+    }
+
+    TelegramUserProfile getTelegramUserProfile() {
+        return profile
+    }
+    void setId(TelegramUserProfile telegramUserProfile) {
+        this.profile = telegramUserProfile
     }
 
     Integer getId() {
