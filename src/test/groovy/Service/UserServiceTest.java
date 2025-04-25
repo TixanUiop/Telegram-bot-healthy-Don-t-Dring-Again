@@ -2,14 +2,18 @@ package Service;
 
 import DAO.UserRepository;
 import DTO.CreateTelegramUser;
+import DTO.CreateUserDto;
+import Entity.Gender;
 import Entity.TelegramUser;
 import Mapper.CreateTelegramUserMapper;
+import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import Exception.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,6 +25,7 @@ class UserServiceTest {
     private UserRepository userRepository;
     @Mock
     private CreateTelegramUserMapper createTelegramUserMapper;
+
 
     private UserService userService;
 
@@ -61,6 +66,17 @@ class UserServiceTest {
     }
 
     @Test
-    void saveUserProfile() {
+    void saveUserProfileOnException() {
+        assertThrows(ConstraintViolationException.class, () -> userService.saveUserProfile(getCreateUserDTO()));
+    }
+
+
+    private static CreateUserDto getCreateUserDTO() {
+        CreateUserDto user = CreateUserDto.builder()
+                .nickname(null)
+                .birthday(LocalDate.of(2003, 12, 3))
+                .gender(Gender.FEMALE)
+                .build();
+        return user;
     }
 }

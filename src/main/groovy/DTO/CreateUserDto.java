@@ -19,7 +19,7 @@ public class CreateUserDto {
     private Long chatId;
     @NotNull
     //TODO Доделать валидацию
-    @Pattern(regexp = "\\^.{2,}$", message = "Имя/Псевдоним не должен быть меньше 2-х символов")
+    @NotNull
     private String nickname;
     @NotNull
     private LocalDate birthday;

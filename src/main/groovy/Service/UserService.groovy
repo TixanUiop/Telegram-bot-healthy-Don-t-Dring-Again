@@ -17,6 +17,7 @@ import jakarta.validation.Validation
 @CompileStatic
 class UserService {
     private static UserService INSTANCE = new UserService()
+
     private UserRepository repository = UserRepository.instance
     private CreateTelegramUserMapper createTelegramUserMapper = CreateTelegramUserMapper.getINSTANCE()
     private CreateUserMapper createUserMapper = CreateUserMapper.getINSTANCE()
@@ -37,7 +38,6 @@ class UserService {
     }
 
     Long saveUserProfile(CreateUserDto createUserDto) {
-
         //validation
         def factory = Validation.buildDefaultValidatorFactory()
         def validator = factory.getValidator()
@@ -45,6 +45,7 @@ class UserService {
         if (!validate.isEmpty()) {
             throw new ConstraintViolationException(validate)
         }
+
         //Mapper
         def map = createUserMapper.ToMap(createUserDto)
 
